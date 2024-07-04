@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,66 +6,92 @@
     text-decoration: none;
     font-family: sans-serif;
 }
-body{
+
+body {
     background: #e8e6e7;
 }
-header{
-    padding: 20px 70px;
+
+header {
+    padding: 10px 70px;
     background: #1d1d1f;
+    position: relative;
+    transition: all 0.5s ease;
 }
-.navigation{
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.navigation .logo{
+
+.navigation .logo {
     width: 50px;
 }
-.navigation ul{
+
+.navigation ul {
     display: flex;
     align-items: center;
     gap: 60px;
 }
-.navigation ul li a{
+
+.navigation ul li a {
     color: #888;
     font-weight: 600;
     padding-bottom: 4px;
     transition: all 0.5s ease-in-out;
 }
-.navigation ul li a:hover{
+
+.navigation ul li a:hover {
     color: #fff;
     border-bottom: 1px solid #fff;
 }
-.navigation .check{
+
+.navigation .check {
     color: #fff;
     border-bottom: 1px solid #fff;
 }
 
 /*Main*/
 
-main section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+main section {
     padding: 5rem 10rem;
+    position: relative;
 }
-.main-text img{
+
+main section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.main-text img {
     width: 15rem;
     margin-bottom: 3vh;
 }
-.main-text h3{
+
+.main-text h3 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
 }
-.main-text p{
+
+.main-text p {
     margin-bottom: 1.5rem;
 }
-.main-text h6{
+
+.main-text h6 {
     color: #999;
     font-size: 1rem;
     margin-bottom: 2rem;
 }
-.main-text .btn{
+
+.main-text .btn {
     padding: 10px 25px;
     background: #0071e3;
     border-radius: 20px;
@@ -73,21 +99,25 @@ main section{
     font-size: 1.5rem;
     transition: all 0.5s;
 }
-.main-text .btn:hover{
+
+.main-text .btn:hover {
     opacity: .85;
 }
-.main-text .text h5{
+
+.main-text .text h5 {
     font-size: 1rem;
     color: #444;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 .main-text .content {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.main-text .content span{
+
+.main-text .content span {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -95,36 +125,49 @@ main section{
     box-shadow: 1px 1px #888;
     transition: all 0.5s;
 }
-.main-text .content span:hover{
+
+.main-text .content span:hover {
     opacity: .80;
 }
-#green{
+
+#green {
     background: #384937;
 }
-#pink{
+
+#pink {
     background: #f8ddd6;
 }
-#blue{
+
+#blue {
     background: #225f7e;
 }
-#black{
+
+#black {
     background: #192028;
 }
-#white{
+
+#white {
     background: #f7f2ee;
 }
-#red{
+
+#red {
     background: #ae0617;
 }
-.main-img{
+
+.main-img {
     transition: all 1s ease;
     z-index: 100;
 }
-.main-img img{
-    width: 500px;
+
+.main-img img {
+    width: 400px;
+    margin-top: 5vh;
     transform: rotate(-7deg);
+    opacity: 1;
+    transition: opacity 0.5s;
 }
-.circle{
+
+.circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -132,4 +175,68 @@ main section{
     height: 100%;
     background: #445c42;
     clip-path: circle(800px at right 1000px);
+    transition: background 0.5s;
+}
+
+/* Botão voltar ao topo */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    display: block;
+}
+
+/* Estilo para imagens maiores */
+.larger-img img {
+    width: 600px;
+    height: 600px;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-content img {
+    flex-shrink: 0;
+}
+
+.section-content .product-info {
+    max-width: 300px;
+}
+
+.section-content .product-info p {
+    margin-bottom: 1.5rem;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-content .btn {
+    padding: 10px 25px;
+    background: #0071e3;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    max-width: 150px;
+}
+
+.section-content .btn:hover {
+    opacity: .85;
 }

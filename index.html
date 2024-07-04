@@ -9,29 +9,30 @@
     <title>iPhone</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav class="navigation">
             <a href="#"><img src="img/logo.png" alt="Logo do iPhone" class="logo"></a>
             <ul>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">iPad</a></li>
-                <li><a href="#" class="check">iPhone</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">AirPods</a></li>
-                <li><a href="#">Só na Apple</a></li>
-                <li><a href="#">Suporte</a></li>
+                <li><a href="#mac">Mac</a></li>
+                <li><a href="#ipad">iPad</a></li>
+                <li><a href="#iphone" class="check">iPhone</a></li>
+                <li><a href="#watch">Watch</a></li>
+                <li><a href="#airpods">AirPods</a></li>
+                <li><a href="#so-na-apple">Só na Apple</a></li>
+                <li><a href="#suporte">Suporte</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <!-- iPhone Section -->
+        <section id="iphone">
             <div class="circle"></div>
             <div class="main-text">
                 <img src="img/iphone13.png" alt="">
                 <h3>Seu novo superpoder.</h3>
                 <p>Chip com velocidade impressionante. Um aumento notável na duração da bateria. E novos recursos de foto e vídeo. <br> No iPhone 13, você faz coisas que nunca pôde. E ele ainda vem em dois tamanhos.</p>
-                <h6>A partir de R$ 6.599</h6>
-                <a href="#" class="btn">Comprar</a>
+                <h6>A partir de R$ 5.499</h6>
+                <a href="https://www.apple.com/br/shop/buy-iphone/iphone-13" target="_blank" class="btn">Comprar</a>
                 <div class="text">
                    <h5>Escolha sua cor favorita:</h5>
                 </div>
@@ -48,17 +49,111 @@
                 <img src="img/green.png" alt="Imagem do iPhone" id="phone">
             </div>
         </section>
+        
+        <!-- Mac Section -->
+        <section id="mac" class="larger-img">
+            <div class="section-content">
+                <div class="product-info">
+                    <h2>Macbook-air</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus nec sem elementum, nec tempus lectus tristique. Cras suscipit nisi a est bibendum, ut eleifend purus convallis.</p>
+                    <a href="https://www.apple.com/br/shop/buy-mac/macbook-air/13-pol.-m2" target="_blank" class="btn">Comprar</a>
+                    <h6>A partir de R$ 10.999</h6>
+                </div>
+                
+                <img src="img/Mac 1.jpg" alt="">
+            </div>
+        </section>
+        
+        <!-- iPad Section -->
+        <section id="ipad" class="larger-img">
+            <div class="section-content">
+                <div class="product-info">
+                    <h2>iPad</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus nec sem elementum, nec tempus lectus tristique. Cras suscipit nisi a est bibendum, ut eleifend purus convallis.</p>
+                    <a href="https://www.apple.com/br/shop/buy-ipad/ipad" target="_blank" class="btn">Comprar</a>
+                    <h6>A partir de R$ 3.999</h6>
+                </div>
+                <img src="img/iPad.png" alt="">
+            </div>
+        </section>
+        
+        <!-- Watch Section -->
+        <section id="watch" class="larger-img">
+            <div class="section-content">
+                <div class="product-info">
+                    <h2>Watch Ultra 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus nec sem elementum, nec tempus lectus tristique. Cras suscipit nisi a est bibendum, ut eleifend purus convallis.</p>
+                    <a href="https://www.apple.com/br/shop/buy-watch/apple-watch-ultra" target="_blank" class="btn">Comprar</a>
+                    <h6>A partir de R$ 9.699</h6>
+                </div>
+                <img src="img/Watch.png" alt="">
+            </div>
+        </section>
+        
+        <!-- AirPods Section -->
+        <section id="airpods" class="larger-img">
+            <div class="section-content">
+                <div class="product-info">
+                    <h2>AirPods</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus nec sem elementum, nec tempus lectus tristique. Cras suscipit nisi a est bibendum, ut eleifend purus convallis.</p>
+                    <a href="https://www.apple.com/br/airpods-2nd-generation/" target="_blank" class="btn">Comprar</a>
+                    <h6>A partir de R$ 1399,00</h6>
+                </div>
+                <img src="img/airpods1.png" alt="">
+            </div>
+        </section>
+        
+        <!-- Só na Apple Section -->
+        <section id="so-na-apple" class="larger-img">
+            <div class="section-content">
+                <div class="product-info">
+                    <h2>Só na Apple</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus nec sem elementum, nec tempus lectus tristique. Cras suscipit nisi a est bibendum, ut eleifend purus convallis.</p>
+                    <a href="https://www.apple.com/br/shop" target="_blank" class="btn">Comprar</a>
+                </div>
+                <img src="img/todos produtos.jpg" alt="">
+            </div>
+        </section>
+        
+        <!-- Suporte Section -->
+        <section id="suporte">
+             <a href="https://support.apple.com/pt-br" target="_blank" class="btn">Suporte</a><br>
+             <a href="https://support.apple.com/pt-br/repair?cid=gn-ols-repair-lp-get_help" target="_blank"  class="btn">Reparos</a><br>
+            <a href="https://www.apple.com/br/shop/accessories/all" target="_blank" class="btn">Acessórios</a><br>
+        </section>
     </main>
+    
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
 
     <script type="text/javascript">
         /*Função de mudar o celular*/
         function imgSlider(e){
-            document.querySelector('#phone').src = e;
+            const phone = document.querySelector('#phone');
+            phone.style.opacity = '0';
+            setTimeout(() => {
+                phone.src = e;
+                phone.style.opacity = '1';
+            }, 300);
         }
+
         /*Função de mudar a cor do circulo*/
         function circleChange(color){
             const circle = document.querySelector('.circle');
             circle.style.background = color;
+        }
+
+        /* Navegação fixa ao rolar */
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('#header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+
+            const backToTop = document.querySelector('#back-to-top');
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        });
+
+        /* Rolar para o topo suavemente */
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
