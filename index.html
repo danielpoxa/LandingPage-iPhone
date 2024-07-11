@@ -12,7 +12,7 @@
     <header id="header">
         <nav class="navigation">
             <a href="#"><img src="img/logo.png" alt="Logo do iPhone" class="logo"></a>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="#mac">Mac</a></li>
                 <li><a href="#ipad">iPad</a></li>
                 <li><a href="#iphone" class="check">iPhone</a></li>
@@ -21,6 +21,7 @@
                 <li><a href="#so-na-apple">Só na Apple</a></li>
                 <li><a href="#suporte">Suporte</a></li>
             </ul>
+            <button class="hamburger" id="hamburger">&#9776;</button>
         </nav>
     </header>
     <main>
@@ -123,38 +124,57 @@
         </section>
     </main>
     
+    <footer>
+        <p>Outras formas de comprar: encontre uma Apple Store ou revendedor Apple na sua região. Ou ligue para 0800-761-0867. Rua Leopoldo Couto de Magalhães Jr., 700, 7º andar, Itaim Bibi. São Paulo, SP. CEP: 04542-000.</p>
+        <p>Os Serviços de Mídia da Apple são fornecidos pela Apple Services LATAM LLC.</p>
+        <p>Brasil<br>Copyright © 2024 Apple Inc. Todos os direitos reservados. Apple Computer Brasil Ltda. CNPJ: 00.623.904/0003-35<br>
+        <a href="https://www.apple.com/br/legal/privacy/">Política de Privacidade</a> | <a href="https://www.apple.com/br/shop/browse/open/salespolicies">Política de vendas</a> | <a href="https://www.apple.com/br/legal/">Avisos legais</a> | <a href="">Mapa do site</a></p>
+    </footer>
+
     <button id="back-to-top" onclick="scrollToTop()">↑</button>
 
     <script type="text/javascript">
         /*Função de mudar o celular*/
         function imgSlider(e){
             const phone = document.querySelector('#phone');
-            phone.style.opacity = '0';
-            setTimeout(() => {
-                phone.src = e;
-                phone.style.opacity = '1';
-            }, 300);
+            phone.src = e;
         }
-
-        /*Função de mudar a cor do circulo*/
         function circleChange(color){
             const circle = document.querySelector('.circle');
             circle.style.background = color;
         }
+        
+        // Script para o botão hamburger
+        const hamburger = document.querySelector('#hamburger');
+        const navList = document.querySelector('.nav-list');
 
-        /* Navegação fixa ao rolar */
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('#header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-
-            const backToTop = document.querySelector('#back-to-top');
-            backToTop.classList.toggle('show', window.scrollY > 300);
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
         });
 
-        /* Rolar para o topo suavemente */
+        // Fechar o menu ao clicar em um item
+        const navItems = document.querySelectorAll('.nav-list li a');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navList.classList.remove('show');
+            });
+        });
+
+        // Função para scroll para o topo
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Mostrar/esconder botão de voltar ao topo
+        window.addEventListener('scroll', () => {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
